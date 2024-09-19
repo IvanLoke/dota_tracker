@@ -1,6 +1,7 @@
 import React from "react";
 import StatsValue from "./statsValue";
 import TimbersawImage from "../../public/Timbersaw.png";
+import BasicCard from "./basicCard";
 
 export default function TitleCard() {
   const stats = {
@@ -19,7 +20,7 @@ export default function TitleCard() {
   const statEntries2 = Object.entries(stats2);
 
   return (
-    <div className="flex max-w-2xl bg-gradient-to-r from-[#181b2a] to-[#0e0f2b] rounded-md pl-6 pb-8 relative">
+    <BasicCard>
       <div className="flex flex-col pt-6">
         <p className="text-white uppercase font-bold font-xl">Top Agent</p>
         <div className="flex items-center border-b border-slate-500 mt-4 pb-4 mb-8">
@@ -58,6 +59,6 @@ export default function TitleCard() {
       <div className="text-white flex flex-grow items-start justify-start ml-8 absolute right-4 bottom-5">
         <img src={TimbersawImage} alt="Timbersaw" className="w-80 h-80" />
       </div>
-    </div>
+    </BasicCard>
   );
 }
