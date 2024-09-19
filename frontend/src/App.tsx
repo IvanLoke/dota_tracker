@@ -3,6 +3,12 @@ import Sidebar from "./components/sidebar";
 import axios from "axios";
 import StatsTable from "./components/statsTable";
 import TitleCard from "./components/titleCard";
+import GradientContainer from "./components/GradientContainer";
+import CompetitiveOverview from "./views/CompetitiveOverview";
+import { CompetitiveOverviewStats } from "./dummyData/CompetitiveOverviewData";
+import RatingOverview from "./views/RatingOverview";
+import PreviousMatches from "./views/PreviousMatches";
+import { PreviousMatchStats } from "./dummyData/PreviousMatchesData";
 
 interface Player {
   account_id: number;
@@ -53,10 +59,26 @@ function App() {
   // }, []);
 
   return (
-    <div className="  w-screen h-screen">
+    <div className="bg-slate-900 flex flex-col w-screen min-h-screen p-4">
       {/* <Sidebar /> */}
-      <>{/* <StatsTable stats={matchData} /> */}</>
-      <TitleCard />
+      {/* <StatsTable stats={matchData} /> */}
+      {/* <TitleCard /> */}
+      <div className="h-14 w-full mb-4 text-white">Top Bar Placeholder</div>
+      <div className="w-full h-screen grid grid-cols-10 grid-rows-4 gap-4">
+        <GradientContainer color="blue-950" twStyles="p-4 col-span-5 row-span-2">Top Hero</GradientContainer>
+        <GradientContainer color="cyan-500" twStyles="p-4 col-span-2 row-span-1">Second Top Hero</GradientContainer>
+        <GradientContainer color="blue-950" twStyles="col-span-3 row-span-4">
+          <PreviousMatches matches={PreviousMatchStats.matches} />
+        </GradientContainer>
+        <GradientContainer color="purple-900" twStyles="p-4 col-span-2 row-span-1">Third Top Hero</GradientContainer>
+        <GradientContainer color="blue-950" twStyles="p-4 col-span-5 row-span-2">
+          <CompetitiveOverview stats={CompetitiveOverviewStats.stats}/>
+        </GradientContainer>
+        <GradientContainer color="purple-900" twStyles="p-4 col-span-2 row-span-1">
+          <RatingOverview rank="legend" />
+        </GradientContainer>
+        <GradientContainer color="blue-950" twStyles="p-4 col-span-2 row-span-1">IDK</GradientContainer>
+      </div>
     </div>
   );
 }
