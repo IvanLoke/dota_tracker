@@ -3,7 +3,7 @@ type HeaderProps = {
 }
 
 const Header = ({ text }: HeaderProps): React.JSX.Element => {
-    return <div className="text-white font-bold uppercase">
+    return <div className="text-white text-lg font-bold uppercase">
         {text}
     </div>
 }

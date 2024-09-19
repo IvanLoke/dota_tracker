@@ -1,0 +1,108 @@
+import { MatchType } from "../types/MatchTypes";
+import { PreviousMatchesProp } from "../views/PreviousMatches";
+
+var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+
+const PreviousMatches: MatchType[] = [
+    {
+        side: "radiant",
+        radiantScore: 24,
+        direScore: 11,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: false,
+        date: new Date(),
+    },
+    {
+        side: "radiant",
+        radiantScore: 24,
+        direScore: 11,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: false,
+        date: new Date(),
+    },
+    {
+        side: "dire",
+        radiantScore: 24,
+        direScore: 11,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: false,
+        date: new Date(),
+    },
+    {
+        side: "radiant",
+        radiantScore: 11,
+        direScore: 24,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: true,
+        date: new Date(),
+    },
+    {
+        side: "radiant",
+        radiantScore: 24,
+        direScore: 11,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: true,
+        date: yesterday,
+    },
+    {
+        side: "dire",
+        radiantScore: 24,
+        direScore: 11,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: false,
+        date: yesterday,
+    },
+    {
+        side: "radiant",
+        radiantScore: 11,
+        direScore: 24,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: false,
+        date: yesterday,
+    },
+    {
+        side: "dire",
+        radiantScore: 11,
+        direScore: 24,
+        kills: 3,
+        deaths: 3,
+        assists: 3,
+        rank: "legend",
+        hero: "Timbersaw",
+        radiantWin: true,
+        date: yesterday,
+    },
+]
+
+export const PreviousMatchStats: PreviousMatchesProp = {
+    matches: PreviousMatches
+};

@@ -15,8 +15,8 @@ const GradientContainer = ({ color, twStyles, children }: GradientContainerProps
     const endColor = fullConfig.theme.colors[colorConfig[0]][Number(colorConfig[1])];
 
     return <div 
-        style={{ background: `linear-gradient(135deg, ${startColor} 0%, ${endColor} 100%)` }}
-        className={`w-full h-full p-8 rounded-lg ${twStyles}`}
+        style={{ background: `linear-gradient(135deg, ${startColor} 40%, ${endColor} 100%)` }}
+        className={`w-full h-full rounded-lg ${twStyles}`}
     >
         {children}
     </div>
