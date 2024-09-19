@@ -3,9 +3,9 @@ import React from "react";
 interface StatsValueProps {
   statDescription: string;
   statValue: string;
-  boldness: string;
-  descriptionFontSize: string;
-  valueFontSize: string;
+  boldness?: string;
+  descriptionFontSize?: string;
+  valueFontSize?: string;
 }
 
 const StatsValue: React.FC<StatsValueProps> = ({
