@@ -1,25 +1,35 @@
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../tailwind.config.js';
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config.js";
 
 const fullConfig = resolveConfig(tailwindConfig);
 
 type GradientContainerProps = {
-    color: string,
-    twStyles?: string,
-    children: React.ReactNode,
-}
+  color: string;
+  twStyles?: string;
+  children: React.ReactNode;
+  relative?: boolean;
+};
 
-const GradientContainer = ({ color, twStyles, children }: GradientContainerProps): React.JSX.Element => {
-    const colorConfig = color.split("-");
-    const startColor = fullConfig.theme.colors.indigo[950];
-    const endColor = fullConfig.theme.colors[colorConfig[0]][Number(colorConfig[1])];
+const GradientContainer = ({
+  color,
+  twStyles,
+  children,
+}: GradientContainerProps): React.JSX.Element => {
+  const colorConfig = color.split("-");
+  const startColor = fullConfig.theme.colors.indigo[950];
+  const endColor =
+    fullConfig.theme.colors[colorConfig[0]][Number(colorConfig[1])];
 
-    return <div 
-        style={{ background: `linear-gradient(135deg, ${startColor} 40%, ${endColor} 100%)` }}
-        className={`w-full h-full rounded-lg ${twStyles}`}
+  return (
+    <div
+      style={{
+        background: `linear-gradient(135deg, ${startColor} 40%, ${endColor} 100%)`,
+      }}
+      className={`w-full h-full rounded-lg ${twStyles}`}
     >
-        {children}
+      {children}
     </div>
-}
+  );
+};
 
 export default GradientContainer;

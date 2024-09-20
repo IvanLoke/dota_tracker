@@ -2,11 +2,21 @@ import React from "react";
 
 interface BasicCardProps {
   children: React.ReactNode;
+  width: string;
+  gradient?: string;
+  paddingBottom?: string;
 }
 
-const BasicCard: React.FC<BasicCardProps> = ({ children }) => {
+const BasicCard: React.FC<BasicCardProps> = ({
+  children,
+  width,
+  gradient,
+  paddingBottom,
+}) => {
   return (
-    <div className="flex max-w-2xl bg-gradient-to-r from-[#181b2a] to-[#0e0f2b] rounded-md pl-6 pb-8 relative">
+    <div
+      className={`flex ${width} ${gradient} w-full h-full rounded-md ${paddingBottom}`}
+    >
       {children}
     </div>
   );
