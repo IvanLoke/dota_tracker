@@ -7,18 +7,21 @@ type GradientContainerProps = {
   color: string;
   twStyles?: string;
   children: React.ReactNode;
-  relative?: boolean;
+  startHex?: string;
 };
 
 const GradientContainer = ({
   color,
   twStyles,
   children,
+  startHex,
 }: GradientContainerProps): React.JSX.Element => {
   const colorConfig = color.split("-");
-  const startColor = fullConfig.theme.colors.indigo[950];
-  const endColor =
-    fullConfig.theme.colors[colorConfig[0]][Number(colorConfig[1])];
+  const startColor = startHex ? startHex : fullConfig.theme.colors.indigo[950];
+  const endColor = startHex
+    ? color
+    : fullConfig.theme.colors[colorConfig[0]][Number(colorConfig[1])];
+
 
   return (
     <div

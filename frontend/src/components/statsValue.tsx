@@ -16,11 +16,11 @@ const StatsValue: React.FC<StatsValueProps> = ({
   valueFontSize,
 }) => {
   return (
-    <div className="flex flex-col items-start">
-      <div className={`text-slate-300 ${descriptionFontSize}`}>
+    <div className="flex flex-col items-start whitespace-nowrap">
+      <div className={`text-slate-300 text-lg 3xl:text-xl ${descriptionFontSize}`}>
         {statDescription}
       </div>
-      <div className={`text-white mt-1 ${boldness} ${valueFontSize}`}>
+      <div className={`text-white text-base 3xl:text-xl mt-1 ${boldness}`}>
         {statValue}
       </div>
     </div>
