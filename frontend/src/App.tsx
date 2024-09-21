@@ -68,7 +68,6 @@ function App() {
         <GradientContainer
           color="blue-950"
           twStyles="p-4 col-span-5 row-span-2"
-          relative={true}
         >
           <TitleCard />
         </GradientContainer>
