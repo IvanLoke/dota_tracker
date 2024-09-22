@@ -94,10 +94,10 @@ function App() {
           >
             <TitleCard />
           </GradientContainer>
-          <div className="col-span-10 grid grid-rows-2 gap-4 xs:flex xs:w-full md:col-span-3 xl:col-span-2 row-span-2 md:grid md:grid-rows-2 md:gap-4">
+          <div className="col-span-10 grid grid-cols-10 grid-rows-2 row-span-2 gap-4 md:col-span-3 xl:col-span-2">
             <GradientContainer
               color="cyan-500"
-              twStyles="p-4 xs:w-1/2 xs:mr-4 md:mr-0 md:w-full"
+              twStyles="p-4 col-span-5 row-span-2 md:col-span-10 md:row-span-1"
             >
               <MiniHeroCard
                 name="Timbersaw"
@@ -107,7 +107,7 @@ function App() {
             </GradientContainer>
             <GradientContainer
               color="purple-900"
-              twStyles="p-4 xs:w-1/2 xs:ml-4 md:ml-0 md:w-full"
+              twStyles="p-4 col-span-5 row-span-2 md:col-span-10 md:row-span-1"
             >
               <MiniHeroCard
                 name="Timbersaw"
