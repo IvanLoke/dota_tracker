@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
-import ExtraLargeAppView from "./views/ExtraLargeAppView";
-import LargeAppView from "./views/LargeAppView";
-import SmallAppView from "./views/SmallAppView";
+import Sidebar from "./components/sidebar";
+import axios from "axios";
+import StatsTable from "./components/statsTable";
+import TitleCard from "./components/titleCard";
+import GradientContainer from "./components/GradientContainer";
+import CompetitiveOverview from "./views/CompetitiveOverview";
+import { CompetitiveOverviewStats } from "./dummyData/CompetitiveOverviewData";
+import RatingOverview from "./views/RatingOverview";
+import PreviousMatches from "./views/PreviousMatches";
+import { PreviousMatchStats } from "./dummyData/PreviousMatchesData";
+import MiniHeroCard from "./components/miniHeroCard";
 
 interface Player {
   account_id: number;
@@ -75,14 +83,64 @@ function App() {
   console.log(height, width);
   return (
     <>
-      <div className="hidden xl:flex">
-        <ExtraLargeAppView />
-      </div>
-      <div className="hidden md:flex xl:hidden">
-        <LargeAppView />
-      </div>
-      <div className="flex md:hidden">
-        <SmallAppView />
+      <div className="bg-slate-900 flex flex-col w-full p-4">
+        {/* <Sidebar /> */}
+        {/* <StatsTable stats={matchData} /> */}
+        <div className="h-14 w-full mb-4 text-white">Top Bar Placeholder</div>
+        <div className="w-full h-full grid grid-cols-10 auto-rows-auto gap-4">
+          <GradientContainer
+            color="blue-950"
+            twStyles="p-4 col-span-10 md:col-span-7 xl:col-span-5 row-span-2"
+          >
+            <TitleCard />
+          </GradientContainer>
+          <div className="col-span-10 grid grid-rows-2 gap-4 xs:flex xs:w-full md:col-span-3 xl:col-span-2 row-span-2 md:grid md:grid-rows-2 md:gap-4">
+            <GradientContainer
+              color="cyan-500"
+              twStyles="p-4 xs:w-1/2 xs:mr-4 md:mr-0 md:w-full"
+            >
+              <MiniHeroCard
+                name="Timbersaw"
+                winRate="60"
+                imageUrl="../public/heroes/Timbersaw.png"
+              />
+            </GradientContainer>
+            <GradientContainer
+              color="purple-900"
+              twStyles="p-4 xs:w-1/2 xs:ml-4 md:ml-0 md:w-full"
+            >
+              <MiniHeroCard
+                name="Timbersaw"
+                winRate="60"
+                imageUrl="../public/heroes/Timbersaw.png"
+              />
+            </GradientContainer>
+          </div>
+          <GradientContainer
+            color="blue-950"
+            twStyles="col-span-10 xl:col-span-3 row-span-4"
+          >
+            <PreviousMatches matches={PreviousMatchStats.matches} />
+          </GradientContainer>
+          <GradientContainer
+            color="blue-950"
+            twStyles="p-4 col-span-10 md:col-span-7 xl:col-span-5 row-span-2"
+          >
+            <CompetitiveOverview stats={CompetitiveOverviewStats.stats} />
+          </GradientContainer>
+          <GradientContainer
+            color="purple-900"
+            twStyles="p-4 col-span-5 md:col-span-3 xl:col-span-2 row-span-1"
+          >
+            <RatingOverview rank="legend" />
+          </GradientContainer>
+          <GradientContainer
+            color="blue-950"
+            twStyles="p-4 col-span-5 md:col-span-3 xl:col-span-2 row-span-1"
+          >
+            IDK
+          </GradientContainer>
+        </div>
       </div>
     </>
   );

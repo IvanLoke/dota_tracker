@@ -58,7 +58,7 @@ export default function TitleCard() {
           <img
             src={TimbersawImage}
             alt="Timbersaw"
-            className="lg:ml-4 h-[300px] lg:h-[450px] 3xl:h-[450px] 2xl:ml-8 3xl:ml-8 3xl:pb-4 object-contain"
+            className="lg:ml-4 h-[300px] lg:h-[450px] 3xl:h-4/5 2xl:ml-8 3xl:ml-8 3xl:pb-4 object-contain"
             style={{ width: "auto" }}
           />
         </div>

@@ -22,6 +22,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       screens: {
+        "xs": "580px",
         "3xl": "1600px",
       },
     },
