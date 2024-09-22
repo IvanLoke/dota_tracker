@@ -49,17 +49,17 @@ export default function TitleCard() {
                 key={statDescription}
                 statDescription={statDescription}
                 statValue={statValue}
-                boldness={""}
-                descriptionFontSize={"text-base"}
+                boldness={"font-bold"}
               />
             ))}
           </div>
         </div>
-        <div className="flex 3xl:pr-4 3xl:px-8 3xl:-mt-12">
+        <div className="flex 3xl:pr-4 3xl:px-8 3xl:-mt-12 items-center">
           <img
             src={TimbersawImage}
             alt="Timbersaw"
-            className="lg:ml-4 lg:h-full xl:h-full 2xl:h-[360px] 3xl:h-[450px] 2xl:ml-8 3xl:ml-8 3xl:pb-4"
+            className="lg:ml-4 h-[300px] lg:h-[450px] 3xl:h-[450px] 2xl:ml-8 3xl:ml-8 3xl:pb-4 object-contain"
+            style={{ width: "auto" }}
           />
         </div>
       </div>

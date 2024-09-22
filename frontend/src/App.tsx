@@ -36,6 +36,27 @@ interface Match {
   players: Player[];
 }
 
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+};
+
 function App() {
   // const BASE_URL = "https://api.opendota.com/api/matches/7887391440";
   // const [matchData, setMatchData] = useState<Match | null>(null);
@@ -58,7 +79,8 @@ function App() {
   // useEffect(() => {
   //   getMatchStats();
   // }, []);
-
+  const { height, width } = useWindowSize();
+  console.log(height, width);
   return (
     <div className="bg-slate-900 flex flex-col w-screen p-4">
       {/* <Sidebar /> */}
