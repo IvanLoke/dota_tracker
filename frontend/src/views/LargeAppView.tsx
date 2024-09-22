@@ -8,7 +8,7 @@ import PreviousMatches from "./PreviousMatches";
 import { PreviousMatchStats } from "../dummyData/PreviousMatchesData";
 import MiniHeroCard from "../components/miniHeroCard";
 
-export default function ExtraLargeAppView() {
+export default function LargeAppView() {
   return (
     <div>
       <div className="bg-slate-900 flex flex-col w-screen p-4">
@@ -18,13 +18,13 @@ export default function ExtraLargeAppView() {
         <div className="w-full h-full grid grid-cols-10 auto-rows-auto gap-4">
           <GradientContainer
             color="blue-950"
-            twStyles="p-4 col-span-5 row-span-2"
+            twStyles="p-4 col-span-7 row-span-2"
           >
             <TitleCard />
           </GradientContainer>
           <GradientContainer
             color="cyan-500"
-            twStyles="p-4 col-span-2 row-span-1"
+            twStyles="p-4 col-span-3 row-span-1"
           >
             <MiniHeroCard
               name="Timbersaw"
@@ -32,12 +32,9 @@ export default function ExtraLargeAppView() {
               imageUrl="../public/heroes/Timbersaw.png"
             />
           </GradientContainer>
-          <GradientContainer color="blue-950" twStyles="col-span-3 row-span-4">
-            <PreviousMatches matches={PreviousMatchStats.matches} />
-          </GradientContainer>
           <GradientContainer
             color="purple-900"
-            twStyles="p-4 col-span-2 row-span-1"
+            twStyles="p-4 col-span-3 row-span-1"
           >
             <MiniHeroCard
               name="Timbersaw"
@@ -47,21 +44,24 @@ export default function ExtraLargeAppView() {
           </GradientContainer>
           <GradientContainer
             color="blue-950"
-            twStyles="p-4 col-span-5 row-span-2"
+            twStyles="p-4 col-span-7 row-span-2"
           >
             <CompetitiveOverview stats={CompetitiveOverviewStats.stats} />
           </GradientContainer>
           <GradientContainer
             color="purple-900"
-            twStyles="p-4 col-span-2 row-span-1"
+            twStyles="p-4 col-span-3 row-span-1"
           >
             <RatingOverview rank="legend" />
           </GradientContainer>
           <GradientContainer
             color="blue-950"
-            twStyles="p-4 col-span-2 row-span-1"
+            twStyles="p-4 col-span-3 row-span-1"
           >
             IDK
+          </GradientContainer>
+          <GradientContainer color="blue-950" twStyles="col-span-10 row-span-4">
+            <PreviousMatches matches={PreviousMatchStats.matches} />
           </GradientContainer>
         </div>
       </div>
