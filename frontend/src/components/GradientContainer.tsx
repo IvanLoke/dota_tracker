@@ -28,7 +28,7 @@ const GradientContainer = ({
       style={{
         background: `linear-gradient(135deg, ${startColor} 40%, ${endColor} 100%)`,
       }}
-      className={`w-full h-full rounded-lg ${twStyles}`}
+      className={`w-full h-full min-h-full rounded-lg ${twStyles}`}
     >
       {children}
     </div>

@@ -60,11 +60,11 @@ function App() {
   // }, []);
 
   return (
-    <div className="bg-slate-900 flex flex-col w-screen min-h-screen p-4">
+    <div className="bg-slate-900 flex flex-col w-screen p-4">
       {/* <Sidebar /> */}
       {/* <StatsTable stats={matchData} /> */}
       <div className="h-14 w-full mb-4 text-white">Top Bar Placeholder</div>
-      <div className="w-full h-screen grid grid-cols-10 grid-rows-4 gap-4">
+      <div className="w-full h-full grid grid-cols-10 auto-rows-auto gap-4">
         <GradientContainer
           color="blue-950"
           twStyles="p-4 col-span-5 row-span-2"
