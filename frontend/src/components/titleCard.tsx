@@ -43,7 +43,7 @@ export default function TitleCard() {
               PLAYED 354H 46M
             </p>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8 h-1/2">
             {statEntries.map(([statDescription, statValue]) => (
               <StatsValue
                 key={statDescription}
